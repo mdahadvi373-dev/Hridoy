@@ -1,25 +1,25 @@
 // Firebase configuration
-// You need to replace these values with your own Firebase project credentials
+// RealEarn App - User Configuration
 
 export const firebaseConfig = {
-  apiKey: "YOUR_FIREBASE_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCvhGuyx6ZSrimCjk2G2Q9pdoihvjb3Hms",
+  authDomain: "realearn-app.firebaseapp.com",
+  databaseURL: "https://realearn-app-default-rtdb.firebaseio.com",
+  projectId: "realearn-app",
+  storageBucket: "realearn-app.firebasestorage.app",
+  messagingSenderId: "241034846565",
+  appId: "1:241034846565:web:26f6da801689f429f9018c",
+  measurementId: "G-WPH8TW221C"
 };
 
 // Initialize Firebase
 import { initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
-import { getAnalytics } from 'firebase/analytics';
 
 const app = initializeApp(firebaseConfig);
 
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-export const analytics = getAnalytics(app);
 
 export default app;
